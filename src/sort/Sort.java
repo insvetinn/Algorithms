@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 
 public abstract class Sort {
         public void sort(Comparable[] array) {
-                System.out.println("This is sort. ");
+                System.out.println("This is Sort. ");
                 // do nothing here
         }
         
