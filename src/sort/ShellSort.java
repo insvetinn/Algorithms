@@ -5,12 +5,13 @@ public class ShellSort extends Sort {
         public void sort(Comparable[] array) {
                 System.out.println("This is ShellSort. ");
                 // ShellSort here
+                int N = array.length;
                 int h = 1;
-                while (h < array.length / 3) {
+                while (h < N / 3) {
                         h = h * 3 + 1;
                 }
                 while (h >= 1) {
-                        for (int i = h; i < array.length; i++) {
+                        for (int i = h; i < N; i++) {
                                 for (int j = i; j > h && less (array[j], array[j - h]); j--) {
                                         swap(array, j, j - h);
                                 }

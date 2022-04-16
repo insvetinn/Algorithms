@@ -5,7 +5,8 @@ public final class SelectionSort extends Sort{
         public void sort(Comparable[] array) {
                 System.out.println("This is SelectionSort. ");
                 // SelectionSort here
-                for (int i = 0; i < array.length; i++) {
+                int N = array.length;
+                for (int i = 0; i < N; i++) {
                         int min = i;
                         for (int j = i + 1; j < array.length; j++) {
                                 if (less(array[j], array[min])) {
