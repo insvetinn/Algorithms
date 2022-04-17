@@ -1,8 +1,8 @@
 package sort;
 
-public class ShellSort extends Sort {
+public class ShellSort extends InsertionSort {
         @Override
-        public void sort(Comparable[] array) {
+        public Comparable[] sort(Comparable[] array) {
                 System.out.println("This is ShellSort. ");
                 // ShellSort here
                 int N = array.length;
@@ -12,15 +12,19 @@ public class ShellSort extends Sort {
                 }
                 while (h >= 1) {
                         for (int i = h; i < N; i++) {
-                                for (int j = i; j > h && less (array[j], array[j - h]); j--) {
+                                // wrong below
+//                                for (int j = i; j > h && less (array[j], array[j - --) {
+                                for (int j = i; j >= h && less(array[j], array[j - h]); j -= h) {
                                         swap(array, j, j - h);
                                 }
                         }
                         h /= 3;
                 }
+                return array;
         }
         
-        // TODO: 4/16/22 first integer not sorted in ShellSort...
+        // (solved) 4/16/22 first integer not sorted in ShellSort...
+        // see "wrong below", for () was written wrongly...
 //        OUTPUT i.e.
 //        New 100 random integers generated & succeeded to write in txt file!
 //        This is ShellSort.

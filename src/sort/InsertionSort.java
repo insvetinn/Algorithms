@@ -1,8 +1,8 @@
 package sort;
 
-public final class InsertionSort extends Sort {
+public class InsertionSort extends Sort {
         @Override
-        public void sort(Comparable[] array) {
+        public Comparable[] sort(Comparable[] array) {
                 System.out.println("This is InsertionSort. ");
                 // InsertionSort here
                 int N = array.length;
@@ -11,5 +11,6 @@ public final class InsertionSort extends Sort {
                                 swap(array, j, j - 1);
                         }
                 }
+                return array;
         }
 }

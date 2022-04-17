@@ -6,10 +6,11 @@ import io.Output;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public abstract class Sort {
-        public void sort(Comparable[] array) {
+public class Sort {
+        public Comparable[] sort(Comparable[] array) {
                 System.out.println("This is Sort. ");
                 // do nothing here
+                return array;
         }
         
         protected static boolean less(Comparable v, Comparable w) {

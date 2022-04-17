@@ -15,6 +15,8 @@ public class Output {
                                 System.out.println(array[i] + " ");
                                 // TODO: 4/15/22 format printing failed...
 //                                System.out.printf("|%d|\d", array[i]);
+                        } else if ((i + 1) % (amountInRow / 4) == 0) {
+                                System.out.print(array[i] + "  ");
                         } else {
                                 System.out.print(array[i] + " ");
 //                                System.out.printf("|%d|", array[i]);
